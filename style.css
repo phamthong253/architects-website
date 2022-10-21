@@ -26,12 +26,14 @@ footer, header, hgroup, menu, nav, section {
 @font-face{
     font-family:Georgia, 'Times New Roman', Times, serif;
     src:url("./fonts/georgia.ttf")
+        url("./fonts/ARLRDBD.TTF")
 }
 p{
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 body {
 	line-height: 1;
+    overflow-x: hidden;
 }
 ol, ul {
 	list-style: none;
@@ -59,17 +61,19 @@ li, a {
     display:inline-block;
     padding:0px 10px;
     transition:all 0.3s ease 0s;
-    color: white;
     text-decoration:none;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
+    color:#ccc;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
 }
 li a:hover{
-    background-color:beige;
+    background-color:dimgrey;
     padding:10px 20px;
 }
 .container img {
     max-width:100%;
-    height:100%;
+    max-height:100%;
     background-position: center;
     background-size: cover;
 }
@@ -101,7 +105,7 @@ h1{
 }
 .projects{
     border-bottom: 2px solid;
-    border-color: lightgray;
+    border-color: black;
     padding-top:16px;
     padding-bottom:16px;
     margin-top:20px;
@@ -135,13 +139,14 @@ h3{
 .house-text{
     position:absolute;
     padding: 8px 16px;
-    background-color: lightgray;
+    background-color: #050505;
+    color:#ccc;
     margin-top:30px;
 }
 .about{
     clear:left;    
     border-bottom: 2px solid;
-    border-color: lightgray;
+    border-color: black;
     padding-top:32px;
     padding-bottom:20px;
     margin-top: 20px;
@@ -185,20 +190,23 @@ h3{
     display:block;
     cursor: pointer;
 }
+.contact-btn a{
+    color:#ccc;
+}
 .contact-btn:hover{
-    background-color:lightgray;
+    background-color:dimgray;
     transition:0.6s ease;
 }
 .info-team{
     width:250px;
 }
 .job-team{
-    opacity:0.5;
+    font-weight: 800;
 }
 .contact{
     clear:left;
     border-bottom: 2px solid;
-    border-color: lightgray;
+    border-color: black;
     padding-top:32px;
     padding-bottom:32px;
     margin-left:5px;
@@ -228,11 +236,12 @@ button{
     cursor:pointer;
     white-space: nowrap;
     background-color: black;
+    color:#ccc;
     font-size:medium;
 }
 button:hover{
     transition: 0.6 ease;
-    background-color: lightgray; 
+    background-color: dimgray; 
 }   
 .input-contact img{
     max-width: 99%;
@@ -250,9 +259,15 @@ footer{
     text-align:center;
     display:block;
 }
+input {
+    border: 2px solid black;
+}
 .navbar-right{
     display:none;
     cursor:pointer;
+}
+.navbar-right a{
+    color:#050505;
 }
 .reveal{
     position:relative;
@@ -279,9 +294,14 @@ footer{
         align-items: center;
         z-index: 1;
         transition: transform 0.5s ease-in;
+        visibility: hidden;
+    }
+    li a{
+        color:#050505;
     }
     .heading-menu li{
         margin-top: 20px;
+        font-weight: bolder;
     }
     :root{
         overflow-x: hidden;
@@ -314,6 +334,7 @@ footer{
 }
 .heading-active ul{
     transform:translateX(0%);
+    visibility: visible;
 }
 @keyframes headingFade{
     from{
