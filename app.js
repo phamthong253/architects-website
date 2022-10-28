@@ -1,6 +1,6 @@
 
 //  menu button 
- const navSlide = () =>{
+ const menuButton = () =>{
  const menu = document.querySelector('.icon'); 
  const heading = document.querySelector('.heading-menu');
  const headingUl = document.querySelectorAll('.heading-menu li');
@@ -15,7 +15,7 @@
         });
     });
 }
-    navSlide();
+    menuButton();
     // scroll animation 
 window.addEventListener('scroll', reveal);
 function reveal(){
@@ -24,7 +24,7 @@ function reveal(){
         
         var windowheight = window.innerHeight;
         var revealtop = reveals[i].getBoundingClientRect().top;
-        var revealpoint = 150;
+        var revealpoint = 300;
 
         if(revealtop < windowheight - revealpoint){
             reveals[i].classList.add('active');
